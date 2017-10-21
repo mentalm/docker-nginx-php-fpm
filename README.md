@@ -25,6 +25,7 @@ This image is available in three flavors: `5.6`, `7.0`, `7.1` corresponding to t
 - `SERVER_ADMIN`: Email address for the ServerAdmin variable
 - `GENERATE_DEFAULT_VHOST_CONFIG`: By default a basic vhost configuration using the to variables above is generated. Use this switch to disable (true/false)
 - `CHOWN_WWWDIR`: Change owner of `/var/www` to `$PUID`:`$PGID`. Default is true, disable if your document root is elsewhere or there is a large number of files in the directory
+- `NGINX_CLIENT_MAX_BODY_SIZE`: Max allowed file size for upload. Default is 50M.
 - `PUID`: Changes the uid of the app user, default 911
 - `PGID`: Changes the gid of the app group, default 911
 - `SMTP_HOST`: Change the SMTP relay server used by ssmtp (sendmail)
@@ -41,6 +42,8 @@ This image is available in three flavors: `5.6`, `7.0`, `7.1` corresponding to t
 - `PHP_SESSION_SAVE_PATH`: Sets the path for saving sessions. Default is `/var/lib/php/sessions`. Use the full URI for Redis or Memcached: `tcp://10.133.14.9:6379?auth=yourverycomplexpasswordhere`
 - `PHP_SESSION_GC_DIVISOR`: Sets [session.gc_divisor](https://php.net/manual/en/session.configuration.php#ini.session.gc-divisor). Default is 100
 - `PHP_SESSION_GC_PROPABILITY`: Sets [session.gc_probability](https://php.net/manual/en/session.configuration.php#ini.session.gc-probability). Default is 0 if session handler is `files` otherwise 1.
+- `PHP_UPLOAD_MAX_FILESIZE`: Sets `upload_max_filesize`. The default is 50M, same nginx
+- `PHP_POST_MAX_SIZE`: Sets `post_max_size`. The default is 8MB.
 - `FPM_MAX_CHILDREN`: Default is 5
 - `FPM_START_SERVER`: Default is 2
 - `FPM_MIN_SPARE_SERVERS`: Default is 1

@@ -17,3 +17,5 @@ dockerize -template /app/php-fpm-pool.tmpl > /etc/php/${PHP_VERSION}/fpm/pool.d/
 # Configure PHP sessions
 dockerize -template /app/php-session.tmpl > /etc/php/${PHP_VERSION}/fpm/conf.d/99-sessions.ini
 
+# Set file upload size
+dockerize -template /app/php-upload.tmpl > /etc/php/${PHP_VERSION}/fpm/conf.d/99-max-upload.ini
