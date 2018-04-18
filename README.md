@@ -15,7 +15,7 @@ An image with nginx stable installed from nginx' repository and PHP installed fr
 
 #### Tags
 
-This image is available in three flavors: `5.6`, `7.0`, `7.1` corresponding to the PHP version.
+This image is available in four flavors: `5.6`, `7.0`, `7.1`, `7.2` corresponding to the PHP version.
 
 #### Environment
 
