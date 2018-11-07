@@ -5,9 +5,8 @@ set -eo pipefail
 add-apt-repository -y ppa:ondrej/php 
 
 # Enable nginx repo
-add-apt-repository 'deb http://nginx.org/packages/ubuntu/ trusty nginx'
-wget -qO - https://nginx.org/keys/nginx_signing.key | apt-key add -
-
+curl -s https://nginx.org/keys/nginx_signing.key | apt-key add -
+add-apt-repository 'deb http://nginx.org/packages/ubuntu/ bionic nginx'
 
 # Update installed packages
 apt-get -y update 
