@@ -1,7 +1,7 @@
 #!/bin/bash
 #set -eo pipefail
 
-for i in 5.6 7.0 7.1
+for i in 5.6 7.0 7.1 7.2 7.3
  do
 	C=nginx-php$i-fpm
 	I=nginx-php-fpm:$i
