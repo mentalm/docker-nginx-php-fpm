@@ -2,7 +2,7 @@
 set -eo pipefail
 
 # Enable PHP 
-add-apt-repository -y ppa:ondrej/php 
+add-apt-repository -y ppa:ondrej/php ppa:certbot/certbot
 
 # Enable nginx repo
 curl -s https://nginx.org/keys/nginx_signing.key | apt-key add -
@@ -13,7 +13,7 @@ apt-get -y update
 apt-get -y dist-upgrade 
 
 # Install nginx and PHP
-apt-get -y install nginx memcached php$PHP_VERSION-fpm php$PHP_VERSION-mysql php$PHP_VERSION-common php-apcu php-geoip \
+apt-get -y install nginx certbot python-certbot-nginx memcached php$PHP_VERSION-fpm php$PHP_VERSION-mysql php$PHP_VERSION-common php-apcu php-geoip \
         php-imagick php-igbinary php-memcached php-redis php$PHP_VERSION-bcmath php$PHP_VERSION-dba \
         php$PHP_VERSION-enchant php$PHP_VERSION-gd php$PHP_VERSION-imap php$PHP_VERSION-intl \
         php$PHP_VERSION-json php$PHP_VERSION-pspell php$PHP_VERSION-recode php$PHP_VERSION-tidy php$PHP_VERSION-xml \
