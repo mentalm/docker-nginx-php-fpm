@@ -2,7 +2,8 @@
 set -eo pipefail
 
 # Enable PHP 
-add-apt-repository -y ppa:ondrej/php ppa:certbot/certbot
+add-apt-repository -y ppa:ondrej/php
+add-apt-repository -y ppa:certbot/certbot
 
 # Enable nginx repo
 curl -s https://nginx.org/keys/nginx_signing.key | apt-key add -
