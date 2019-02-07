@@ -13,12 +13,18 @@ apt-get -y update
 apt-get -y dist-upgrade 
 
 # Install nginx and PHP
-apt-get -y install nginx php$PHP_VERSION-fpm php$PHP_VERSION-mysql php$PHP_VERSION-common php-apcu php-geoip \
-	php-imagick php-igbinary php-memcached php-redis php$PHP_VERSION-bcmath php$PHP_VERSION-dba \
-	php$PHP_VERSION-enchant php$PHP_VERSION-gd php$PHP_VERSION-imap php$PHP_VERSION-intl \
-	php$PHP_VERSION-json php$PHP_VERSION-pspell php$PHP_VERSION-recode php$PHP_VERSION-tidy php$PHP_VERSION-xml \
-	php$PHP_VERSION-xmlrpc php-pear php$PHP_VERSION-zip php$PHP_VERSION-bz2 php$PHP_VERSION-mbstring  php$PHP_VERSION-curl \
-	php$PHP_VERSION-pgsql php$PHP_VERSION-ldap
+apt-get -y install nginx memcached php$PHP_VERSION-fpm php$PHP_VERSION-mysql php$PHP_VERSION-common php-apcu php-geoip \
+        php-imagick php-igbinary php-memcached php-redis php$PHP_VERSION-bcmath php$PHP_VERSION-dba \
+        php$PHP_VERSION-enchant php$PHP_VERSION-gd php$PHP_VERSION-imap php$PHP_VERSION-intl \
+        php$PHP_VERSION-json php$PHP_VERSION-pspell php$PHP_VERSION-recode php$PHP_VERSION-tidy php$PHP_VERSION-xml \
+        php$PHP_VERSION-xmlrpc php-pear php$PHP_VERSION-zip php$PHP_VERSION-bz2 php$PHP_VERSION-mbstring  php$PHP_VERSION-curl \
+        php$PHP_VERSION-pgsql php$PHP_VERSION-opcache php$PHP_VERSION-pdo php$PHP_VERSION-ctype php$PHP_VERSION-dom php$PHP_VERSION-exif \
+        php$PHP_VERSION-fileinfo php$PHP_VERSION-gettext php$PHP_VERSION-iconv php$PHP_VERSION-memcache php$PHP_VERSION-json \
+        php$PHP_VERSION-phar php$PHP_VERSION-posix php$PHP_VERSION-readline php$PHP_VERSION-shmop php$PHP_VERSION-shmop \
+        php$PHP_VERSION-simplexml php$PHP_VERSION-soap php$PHP_VERSION-sockets php$PHP_VERSION-sysvmsg php$PHP_VERSION-sysvsem \
+        php$PHP_VERSION-sysvshm php$PHP_VERSION-tokenizer php$PHP_VERSION-wddx php$PHP_VERSION-xmlreader php$PHP_VERSION-xmlwriter \
+        php$PHP_VERSION-xsl
+
 
 mkdir /var/www 
 ln -sf /dev/stdout /var/log/nginx/access.log 
